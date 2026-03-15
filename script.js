@@ -131,21 +131,27 @@ async function sendMessage() {
     const message = messageInput.value.trim();
     
     if (message === '') return;
-    
-    // Add user message
+
+    // show user message
     addMessage(message, true);
     messageInput.value = '';
 
     try {
-        const response = await fetch('/.netlify/functions/chat', {
+        const response = await fetch('http://localhost:5000/api/chat', {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
+            headers: {
+                'Content-Type': 'application/json'
+            },
             body: JSON.stringify({ message: message })
         });
+
         const data = await response.json();
+
         addMessage(data.reply, false);
+
     } catch (error) {
-        // Fallback to local responses if server is not running
+        console.log("Server not reachable, using local responses");
+
         const botResponse = getChatbotResponse(message);
         addMessage(botResponse, false);
     }
