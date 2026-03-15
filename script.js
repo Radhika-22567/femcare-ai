@@ -126,7 +126,8 @@ function addMessage(text, isUser = false) {
 }
 
 // Function to handle sending message
-function sendMessage() {
+// PASTE this new function instead
+async function sendMessage() {
     const message = messageInput.value.trim();
     
     if (message === '') return;
@@ -134,14 +135,21 @@ function sendMessage() {
     // Add user message
     addMessage(message, true);
     messageInput.value = '';
-    
-    // Simulate bot typing
-    setTimeout(() => {
+
+    try {
+        const response = await fetch('http://localhost:5000/api/chat', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ message: message })
+        });
+        const data = await response.json();
+        addMessage(data.reply, false);
+    } catch (error) {
+        // Fallback to local responses if server is not running
         const botResponse = getChatbotResponse(message);
         addMessage(botResponse, false);
-    }, 500);
+    }
 }
-
 // Event listeners for chat
 sendBtn.addEventListener('click', sendMessage);
 
