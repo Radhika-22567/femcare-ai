@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FemCare AI – Your Private Feminine Health Assistant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">
+                <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"></path>
+                </svg>
+                <span>FemCare AI</span>
+            </div>
+            <button class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#chatbot" class="nav-link">Chatbot</a></li>
+                <li><a href="#health-topics" class="nav-link">Health Topics</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1 class="hero-title">FemCare AI – Your Private Feminine Health Assistant</h1>
+            <p class="hero-subtitle">Get instant, personalized answers to your health questions with complete privacy and confidentiality</p>
+            <button class="cta-button" id="heroCtaBtn">Start Chatting Now</button>
+        </div>
+        <div class="hero-illustration">
+            <svg viewBox="0 0 400 400" class="illustration">
+                <circle cx="200" cy="200" r="180" fill="#FFF0F7" stroke="#E8D4E8" stroke-width="2"/>
+                <ellipse cx="200" cy="150" rx="60" ry="70" fill="#F5D9ED"/>
+                <circle cx="170" cy="200" r="15" fill="#E8A8D8"/>
+                <circle cx="230" cy="200" r="15" fill="#E8A8D8"/>
+                <path d="M 180 250 Q 200 270 220 250" stroke="#E8A8D8" stroke-width="3" fill="none"/>
+                <circle cx="100" cy="100" r="25" fill="#FFE5F0" opacity="0.6"/>
+                <circle cx="300" cy="320" r="35" fill="#F5D9ED" opacity="0.4"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Chatbot Section -->
+    <section class="chatbot-section" id="chatbot">
+        <div class="chatbot-container">
+            <h2 class="section-title">Chat with FemCare AI</h2>
+            <div class="chatbot-wrapper">
+                <div class="chat-box" id="chatBox">
+                    <div class="welcome-message">
+                        <div class="bot-avatar">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="1"></circle>
+                                <path d="M12 1a11 11 0 1 0 0 22 11 11 0 0 0 0-22z"></path>
+                                <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
+                            </svg>
+                        </div>
+                        <p><strong>Hello!</strong> I'm FemCare AI. I'm here to help you with any questions about feminine health. Your privacy is our priority.</p>
+                    </div>
+                </div>
+                <div class="chat-input-area">
+                    <input type="text" id="messageInput" class="chat-input" placeholder="Ask me anything about feminine health...">
+                    <button class="send-button" id="sendBtn">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="22" y1="2" x2="11" y2="13"></line>
+                            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Health Topics Section -->
+    <section class="health-topics" id="health-topics">
+        <div class="section-container">
+            <h2 class="section-title">Explore Health Topics</h2>
+            <p class="section-subtitle">Learn more about important aspects of feminine health</p>
+            <div class="topics-grid">
+                <div class="topic-card">
+                    <div class="topic-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="13" r="8"></circle>
+                            <path d="M12 9V5M12 21v-4M16 13h4M4 13h4"></path>
+                        </svg>
+                    </div>
+                    <h3>Menstrual Health</h3>
+                    <p>Understanding your cycle, managing symptoms, and tracking patterns for better health awareness.</p>
+                </div>
+
+                <div class="topic-card">
+                    <div class="topic-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path>
+                            <path d="M12.5 7h-.5v5l4.2 2.5"></path>
+                        </svg>
+                    </div>
+                    <h3>PCOS</h3>
+                    <p>Polycystic Ovary Syndrome management, treatment options, and lifestyle adjustments.</p>
+                </div>
+
+                <div class="topic-card">
+                    <div class="topic-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"></path>
+                        </svg>
+                    </div>
+                    <h3>Pregnancy Care</h3>
+                    <p>Prenatal and postnatal care guidance, nutrition, and preparing for motherhood.</p>
+                </div>
+
+                <div class="topic-card">
+                    <div class="topic-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                        </svg>
+                    </div>
+                    <h3>Mental Health</h3>
+                    <p>Supporting emotional wellness, managing stress, and addressing hormonal mood changes.</p>
+                </div>
+
+                <div class="topic-card">
+                    <div class="topic-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L15.09 8.26H22L17.55 12.79L19.64 19.04L12 14.5L4.36 19.04L6.45 12.79L2 8.26H8.91L12 2Z"></path>
+                        </svg>
+                    </div>
+                    <h3>Nutrition</h3>
+                    <p>Nutritional guidance tailored to different phases of your cycle and health goals.</p>
+                </div>
+
+                <div class="topic-card">
+                    <div class="topic-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path>
+                            <path d="M12 6v6l4.2 2.5"></path>
+                        </svg>
+                    </div>
+                    <h3>Wellness Tips</h3>
+                    <p>Daily habits and practices to support your overall health and well-being.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Privacy Section -->
+    <section class="privacy-section">
+        <div class="section-container">
+            <h2 class="section-title">Your Privacy Matters</h2>
+            <div class="privacy-grid">
+                <div class="privacy-item">
+                    <div class="privacy-icon">🔒</div>
+                    <h3>End-to-End Encrypted</h3>
+                    <p>All conversations are encrypted and secure. Your data stays private.</p>
+                </div>
+                <div class="privacy-item">
+                    <div class="privacy-icon">🙈</div>
+                    <h3>Anonymous Support</h3>
+                    <p>Chat without sharing personal information. Complete anonymity available.</p>
+                </div>
+                <div class="privacy-item">
+                    <div class="privacy-icon">⚖️</div>
+                    <h3>HIPAA Compliant</h3>
+                    <p>We comply with healthcare privacy standards and regulations.</p>
+                </div>
+                <div class="privacy-item">
+                    <div class="privacy-icon">🗑️</div>
+                    <h3>Data Control</h3>
+                    <p>You can delete your conversations anytime. Full control over your data.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="section-container">
+            <h2 class="section-title">About FemCare AI</h2>
+            <div class="about-content">
+                <p>FemCare AI is an intelligent health assistant designed specifically for women's health and wellness. Our mission is to provide accessible, private, and evidence-based information about feminine health topics.</p>
+                <p>We're not a substitute for professional medical advice, but a supportive tool to help you understand your body better and make informed decisions about your health.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>FemCare AI</h4>
+                    <p>Your private feminine health assistant</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#chatbot">Chatbot</a></li>
+                        <li><a href="#health-topics">Health Topics</a></li>
+                        <li><a href="#about">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 FemCare AI. All rights reserved. | Prioritizing your health and privacy.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
